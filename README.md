@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Snackrot is a colorful emoji tycoon built on Next.js App Router. Catch physics-driven brainrots, equip them to earn money, spin wheels for ingredients, fuse special brainrots, and clear a boss minigame for rare loot. Enter a secret code to unlock the admin panel and trigger events.
 
-## Getting Started
+## Quick Start
 
-First, run the development server:
-
-```bash
+```powershell
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Emoji + Colorful UI: Vibrant gradients and emoji sprites throughout.
+- Roaming Brainrots: Physics-driven emoji float around; click to catch and auto-equip.
+- Earnings: Equipped brainrots generate money over time; secret category includes >1B/s.
+- Spins: Three wheels — normal, epic, secret — grant random ingredients.
+- Fusion: Combine ingredients into special/secret brainrots.
+- Minigame House: Buy a ticket, enter Boss Room, shoot the giant brainrot; win special rewards.
+- Admin Code: Enter `tqkhoi12345678910` to unlock the admin panel.
+- Events:
+	- Taco Rain 🌮: Brainrots spawned during event earn +10%.
+	- Geometry Dash 🧩: Spawns OG set — Spike, Cube, Ball, Robot, Spider.
 
-## Learn More
+## Routes
 
-To learn more about Next.js, take a look at the following resources:
+- `/` Main game (HUD + physics scene)
+- `/spins` Spin wheels (normal/epic/secret)
+- `/fusion` Fusion lab
+- `/minigames/house` Ticket purchase and entry
+- `/minigames/boss` Boss shooter
+- `/admin` Admin tools (unlocked by code)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16, React 19, TypeScript 5
+- Tailwind v4, Zustand stores, Matter.js physics
